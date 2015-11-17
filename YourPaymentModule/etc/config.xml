@@ -6,17 +6,17 @@
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Store/etc/config.xsd">
-    <default>
-        <payment>
-            <paymentmethodname>
+	<default>
+        <carriers>
+            <carriercode>
                 <active>1</active>
-                <title>PaymentMethodName</title>
-                <order_status>pending_payment</order_status>
-                <instructions>Instruction.</instructions>
-                <payment_action>true</payment_action>
-                <model>YourCompanyName\YourPaymentModule\Model\PaymentMethodName</model>
-                <group>offline</group>
-            </paymentmethodname>
-        </payment>
+                <sallowspecific>0</sallowspecific>
+				<model>YourCompanyName\YourPaymentModule\Model\Carrier\CarrierCode</model>
+                <name>YourCompanyName YourPaymentModule Shipping</name>
+                <price>0.00</price>
+                <title>YourCompanyName YourPaymentModule Shipping</title>
+               <specificerrmsg>YourCompanyName YourPaymentModule Shipping is not available for your area. Please contact us.</specificerrmsg>
+            </carriercode>
+        </carriers>
     </default>
 </config>
